@@ -5,7 +5,9 @@ let menuItems = document.querySelectorAll(".menu-item"),
   promptBlock = document.getElementById("prompt"),
   title = document.getElementById("title");
 
-//1
+
+ 
+  //1
 
 
 menu.insertBefore(menuItems[2], menuItems[1]);  
@@ -16,7 +18,7 @@ newMenuItem.classList.add("menu-item");
 menu.appendChild(newMenuItem);
 
 //2
-document.body.style.background = "url('../img/apple_true.jpg')";
+document.body.style.backgroundImage = "url('img/apple_true.jpg')";  
 
 //3
 const newTitle = document.createElement("div");
