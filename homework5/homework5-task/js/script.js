@@ -6,26 +6,17 @@ let menuItems = document.querySelectorAll(".menu-item"),
   title = document.getElementById("title");
 
 //1
-const newMenuItem = document.createElement("div");
+
+
+menu.insertBefore(menuItems[2], menuItems[1]);  
+
+const newMenuItem = document.createElement("li");
 newMenuItem.innerHTML = "Пятый пункт";
 newMenuItem.classList.add("menu-item");
-
-const secondItem = document.createElement("div");
-secondItem.innerHTML = "Второй пункт";
-secondItem.classList.add("menu-item");
-
-menu.replaceChild(secondItem, menuItems[1]);
-
-const thirdItem = document.createElement("div");
-thirdItem.innerHTML = "Третий пункт";
-thirdItem.classList.add("menu-item");
-
-menu.replaceChild(thirdItem, menuItems[2]);
-
 menu.appendChild(newMenuItem);
 
 //2
-document.body.style.background = " url('../img/apple_true.jpg') ";
+document.body.style.background = "url('../img/apple_true.jpg')";
 
 //3
 const newTitle = document.createElement("div");
@@ -33,12 +24,11 @@ newTitle.innerHTML = "Мы продаем только подлинную тех
 newTitle.classList.add("title");
 column[1].replaceChild(newTitle, title);
 
+//title.textContent = "Мы продаем только подлинную технику Apple";
+
 //4
 column[1].removeChild(adv);
 
 //5
 const answer = prompt("Каково ваше отношение к технике Apple?", "");
 promptBlock.innerHTML = answer;
-
-
-
